@@ -14,19 +14,21 @@
   "files": [
     {
       "path": "annual.csv",
-      "schema": [
-        {
-          "id": "Year",
-          "type": "date",
-          "format": "yyyy"
-        },
-        {
-          "id": "Rate",
-          "type": "number",
-          "format": "percentage",
-          "description": "Annual average yield from British Government Securities, 10 year Nominal Par Yield"
-        }
-      ]
+      "schema": {
+        "fields": [
+          {
+            "id": "Year",
+            "type": "date",
+            "format": "yyyy"
+          },
+          {
+            "id": "Rate",
+            "type": "number",
+            "format": "percentage",
+            "description": "Annual average yield from British Government Securities, 10 year Nominal Par Yield"
+          }
+        ]
+      }
     }
   ]
 }
