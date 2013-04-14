@@ -26,8 +26,8 @@ There are several relevant series:
 
 ## License
 
-However, the [Bank of England Terms of Use][tou] indicate restriction on
-non-commercial use only:
+The [Bank of England Terms of Use][tou] appear only to allow non-commercial
+use:
 
 > Statistical Interactive Database (IADB) Terms and Conditions
 > 
@@ -40,8 +40,8 @@ non-commercial use only:
 
 [tou]: http://www.bankofengland.co.uk/pages/disclaimer.aspx#Statistics
 
-However, the amounts of data provided in this dataset are so minimal as to fall
-below any threshold for any Database Rights. 
+However, the amounts of data provided in this dataset is so minimal as likely to fall
+below any threshold for Database Rights. 
 
 As such the maintainers feel warranted in putting the dataset out under the
 Public Domain Dedication and License but that they can, obviously, only license
