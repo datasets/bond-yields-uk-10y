@@ -24,6 +24,15 @@ There are several relevant series:
 * 10y par gross redemption yield Annual average - IUAAAJLW - Annual
   * 1984-2007 (not clear why this ends in 2007)
 
+## Preparation
+
+Do the following:
+
+    . scripts/download.sh
+    . scripts/extract.sh
+
+Data will be in `annual.csv`.
+
 ## License
 
 The [Bank of England Terms of Use][tou] appear only to allow non-commercial

@@ -8,7 +8,8 @@
   "licenses": [
     {
       "id": "odc-pddl",
-      "url": "http://opendatacommons.org/licenses/pddl/"
+      "url": "http://opendatacommons.org/licenses/pddl/",
+      "name": "Public Domain Dedication and License"
     }
   ],
   "resources": [
