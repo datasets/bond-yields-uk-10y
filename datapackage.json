@@ -14,16 +14,34 @@
   ],
   "resources": [
     {
-      "path": "annual.csv",
+      "path": "quarterly.csv",
+      "format": "csv",
       "schema": {
         "fields": [
           {
-            "id": "Year",
-            "type": "date",
-            "format": "yyyy"
+            "name": "Date",
+            "type": "date"
           },
           {
-            "id": "Rate",
+            "name": "Rate",
+            "type": "number",
+            "format": "percentage",
+            "description": "Quarterly average yield from British Government Securities, 10 year Nominal Par Yield"
+          }
+        ]
+      }
+    },
+    {
+      "path": "annual.csv",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "date"
+          },
+          {
+            "name": "Rate",
             "type": "number",
             "format": "percentage",
             "description": "Annual average yield from British Government Securities, 10 year Nominal Par Yield"
@@ -37,7 +55,7 @@
       "id": "graph",
       "type": "Graph",
       "state": {
-        "group": "Year",
+        "group": "Date",
         "series": [ "Rate" ]
       }
     }
