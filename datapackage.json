@@ -14,7 +14,7 @@
   ],
   "resources": [
     {
-      "path": "quarterly.csv",
+      "path": "data/quarterly.csv",
       "format": "csv",
       "schema": {
         "fields": [
@@ -32,7 +32,7 @@
       }
     },
     {
-      "path": "annual.csv",
+      "path": "data/annual.csv",
       "format": "csv",
       "schema": {
         "fields": [
