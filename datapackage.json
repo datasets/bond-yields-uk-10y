@@ -52,11 +52,15 @@
   ],
   "views": [
     {
-      "id": "graph",
-      "type": "Graph",
-      "state": {
+      "name": "graph",
+      "title": "Average yield from British Government Securities, 10 year Nominal Par Yield",
+      "specType": "simple",
+      "spec": {
+        "type": "line",
         "group": "Date",
-        "series": [ "Rate" ]
+        "series": [
+          "Rate"
+        ]
       }
     }
   ]
