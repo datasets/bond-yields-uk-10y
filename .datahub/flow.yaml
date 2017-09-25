@@ -1,0 +1,32 @@
+meta:
+  dataset: bond-yields-uk-10y
+  findability: published
+  owner: core
+  ownerid: core
+  version: 1
+inputs:
+- kind: datapackage
+  parameters:
+    resource-mapping:
+      quarterly: http://www.bankofengland.co.uk/boeapps/iadb/fromshowcolumns.asp?csv.x=yes&SeriesCodes=IUQAMNPY&UsingCodes=Y&CSVF=TN&Datefrom=01/Jan/1963
+      annual: http://www.bankofengland.co.uk/boeapps/iadb/fromshowcolumns.asp?csv.x=yes&SeriesCodes=IUAAMNPY&UsingCodes=Y&CSVF=TN&Datefrom=01/Jan/1963
+  url: https://raw.githubusercontent.com/datasets/bond-yields-uk-10y/master/.datahub/datapackage.json
+processing:
+  -
+    input: quarterly
+    tabulator:
+      skip_rows: 2
+      headers:
+        - Date
+        - Rate
+    output: quarterly
+  -
+    input: annual
+    tabulator:
+      skip_rows: 2
+      headers:
+        - Year
+        - Rate
+    output: annual
+schedule:
+    crontab: '0 0 1 */3 *'
