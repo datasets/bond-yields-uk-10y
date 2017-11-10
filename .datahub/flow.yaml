@@ -72,4 +72,4 @@ processing:
         - Year
         - Rate
     output: annual
-schedule: 'every 1d'
+schedule: 'every 90d'
