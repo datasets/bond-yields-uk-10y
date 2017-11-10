@@ -4,14 +4,14 @@
   "sources": [
     {
       "name": "Bank of England",
-      "web": "http://www.bankofengland.co.uk/boeapps/iadb/index.asp?Travel=NIxIRx&levels=1&XNotes=Y&C=DUS&G0Xtop.x=51&G0Xtop.y=7&XNotes2=Y&Nodes=X41514X41515X41516X41517X55047X76909X4051X4052X4128X33880X4053X4058&SectionRequired=I&HideNums=-1&ExtraInfo=true#BM",
+      "path": "http://www.bankofengland.co.uk/boeapps/iadb/index.asp?Travel=NIxIRx&levels=1&XNotes=Y&C=DUS&G0Xtop.x=51&G0Xtop.y=7&XNotes2=Y&Nodes=X41514X41515X41516X41517X55047X76909X4051X4052X4128X33880X4053X4058&SectionRequired=I&HideNums=-1&ExtraInfo=true#BM",
       "title": "Bank of England"
     }
   ],
   "licenses": [
     {
       "id": "odc-pddl",
-      "url": "http://opendatacommons.org/licenses/pddl/",
+      "path": "http://opendatacommons.org/licenses/pddl/",
       "name": "public_domain_dedication_and_license"
     }
   ],
