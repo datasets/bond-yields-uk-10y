@@ -38,7 +38,6 @@ inputs:
               -
                 name: Rate
                 type: number
-                format: percentage
                 description: Quarterly average yield from British Government Securities, 10 year Nominal Par Yield
         -
           name: annual
@@ -53,8 +52,16 @@ inputs:
               -
                 name: Rate
                 type: number
-                format: percentage
-                description: Annual average yield from British Government Securities, 10 year Nominal Par Yield 
+                description: Annual average yield from British Government Securities, 10 year Nominal Par Yield
+      views:
+        - name: graph
+          title: Average yield from British Government Securities, 10 year Nominal Par Yield
+          specType: simple
+          spec:
+            type: line
+            group: Date
+            series:
+              - Rate           
 processing:
   -
     input: quarterly

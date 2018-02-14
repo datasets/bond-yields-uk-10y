@@ -29,7 +29,6 @@
           {
             "name": "Rate",
             "type": "number",
-            "format": "percentage",
             "description": "Quarterly average yield from British Government Securities, 10 year Nominal Par Yield"
           }
         ]
@@ -49,7 +48,6 @@
           {
             "name": "Rate",
             "type": "number",
-            "format": "percentage",
             "description": "Annual average yield from British Government Securities, 10 year Nominal Par Yield"
           }
         ]
