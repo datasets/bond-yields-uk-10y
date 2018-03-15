@@ -22,9 +22,9 @@ inputs:
           title: Bank of England
       licenses:
         -
-          id: odc-pddl
+          name: ODC-PDDL-1.0
           path: http://opendatacommons.org/licenses/pddl/
-          name: public_domain_dedication_and_license
+          title: Open Data Commons Public Domain Dedication and License v1.0
       resources:
         -
           name: quarterly
