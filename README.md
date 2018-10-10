@@ -34,12 +34,17 @@ There are several relevant series:
 
 ## Preparation
 
-Do the following:
+You will need Python 3.6 or greater and dataflows library to run the script
 
-    . scripts/download.sh
-    . scripts/extract.sh
+To update the data run the process script locally:
 
-Data will be in `annual.csv`.
+```
+# Install dataflows
+pip install dataflows
+
+# Run the script
+python flows/run.py
+```
 
 ## License
 
@@ -47,7 +52,7 @@ The [Bank of England Terms of Use][tou] appear only to allow non-commercial
 use:
 
 > Statistical Interactive Database (IADB) Terms and Conditions
-> 
+>
 > The content of the database is for general information only, and is provided
 > to users free of charge. Commercial use for financial gain is not permitted
 > without the express permission of the Bank of England.  The Bank of England
@@ -58,9 +63,8 @@ use:
 [tou]: http://www.bankofengland.co.uk/pages/disclaimer.aspx#Statistics
 
 However, the amounts of data provided in this dataset is so minimal as likely to fall
-below any threshold for Database Rights. 
+below any threshold for Database Rights.
 
 As such the maintainers feel warranted in putting the dataset out under the
 Public Domain Dedication and License but that they can, obviously, only license
 (or dedicate) material they control (or in which there are no rights).
-
