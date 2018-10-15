@@ -9,10 +9,8 @@ def rename_resources(package: PackageWrapper):
     package.pkg.descriptor['resources'][1]['path'] = 'data/annual.csv'
     yield package.pkg
     res_iter = iter(package)
-    first: ResourceWrapper = next(res_iter)
-    second: ResourceWrapper = next(res_iter)
-    yield first.it
-    yield second.it
+    for res in res_iter:
+        yield res.it
     yield from package
 
 
@@ -48,16 +46,16 @@ bond_uk = Flow(
         skip_rows=[1],
         headers=['Date', 'Rate']
     ),
-    set_type('Date', type='date', format='any'),
-    set_type('Rate', type='number', description='Quarterly average yield from British Government Securities, 10 year Nominal Par Yield'),
     load(
         load_source='http://www.bankofengland.co.uk/boeapps/iadb/fromshowcolumns.asp?csv.x=yes&SeriesCodes=IUAAMNPY&UsingCodes=Y&CSVF=TN&Datefrom=01/Jan/1963',
         skip_rows=[1],
         headers=['Year', 'Rate']
     ),
-    set_type('Year', type='date', format='any'),
-    set_type('Rate', type='number', description='Annual average yield from British Government Securities, 10 year Nominal Par Yield'),
     rename_resources,
+    set_type('Date', resources='quarterly', type='date', format='any'),
+    set_type('Rate', resources='quarterly', type='number', description='Quarterly average yield from British Government Securities, 10 year Nominal Par Yield'),
+    set_type('Year', resources='annual', type='date', format='any'),
+    set_type('Rate', resources='annual', type='number', description='Annual average yield from British Government Securities, 10 year Nominal Par Yield'),
     validate(),
     printer(),
     dump_to_path(),
