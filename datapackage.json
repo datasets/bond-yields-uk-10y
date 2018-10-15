@@ -1,6 +1,70 @@
 {
+  "bytes": 3324,
+  "count_of_rows": 173,
+  "hash": "1217a28898fbe25c199b37f62c90cbd6",
+  "licenses": [
+    {
+      "id": "odc-pddl",
+      "name": "public_domain_dedication_and_license",
+      "path": "http://opendatacommons.org/licenses/pddl/"
+    }
+  ],
   "name": "bond-yields-uk-10y",
-  "title": "10y UK Government Bond Yields (long-term interest rate)",
+  "profile": "data-package",
+  "resources": [
+    {
+      "encoding": "utf-8",
+      "format": "",
+      "mediatype": "text/",
+      "name": "quarterly",
+      "path": "data/quarterly.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "format": "any",
+            "name": "Date",
+            "type": "date"
+          },
+          {
+            "description": "Quarterly average yield from British Government Securities, 10 year Nominal Par Yield",
+            "format": "default",
+            "name": "Rate",
+            "type": "number"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "encoding": "utf-8",
+      "format": "",
+      "mediatype": "text/",
+      "name": "annual",
+      "path": "data/annual.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "format": "any",
+            "name": "Year",
+            "type": "date"
+          },
+          {
+            "description": "Annual average yield from British Government Securities, 10 year Nominal Par Yield",
+            "format": "default",
+            "name": "Rate",
+            "type": "number"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    }
+  ],
   "sources": [
     {
       "name": "Bank of England",
@@ -8,65 +72,19 @@
       "title": "Bank of England"
     }
   ],
-  "licenses": [
-    {
-      "id": "odc-pddl",
-      "path": "http://opendatacommons.org/licenses/pddl/",
-      "name": "public_domain_dedication_and_license"
-    }
-  ],
-  "resources": [
-    {
-      "path": "data/quarterly.csv",
-      "format": "csv",
-      "schema": {
-        "fields": [
-          {
-            "name": "Date",
-            "type": "date",
-            "format": "any"
-          },
-          {
-            "name": "Rate",
-            "type": "number",
-            "description": "Quarterly average yield from British Government Securities, 10 year Nominal Par Yield"
-          }
-        ]
-      },
-      "name": "quarterly"
-    },
-    {
-      "path": "data/annual.csv",
-      "format": "csv",
-      "schema": {
-        "fields": [
-          {
-            "name": "Year",
-            "type": "date",
-            "format": "any"
-          },
-          {
-            "name": "Rate",
-            "type": "number",
-            "description": "Annual average yield from British Government Securities, 10 year Nominal Par Yield"
-          }
-        ]
-      },
-      "name": "annual"
-    }
-  ],
+  "title": "10y UK Government Bond Yields (long-term interest rate)",
   "views": [
     {
       "name": "graph",
-      "title": "Average yield from British Government Securities, 10 year Nominal Par Yield",
-      "specType": "simple",
       "spec": {
-        "type": "line",
         "group": "Date",
         "series": [
           "Rate"
-        ]
-      }
+        ],
+        "type": "line"
+      },
+      "specType": "simple",
+      "title": "Average yield from British Government Securities, 10 year Nominal Par Yield"
     }
   ]
 }
