@@ -1,18 +1,11 @@
+import os
+
 from dataflows import Flow, PackageWrapper, ResourceWrapper, validate
-from dataflows import add_metadata, dump_to_path, load, set_type, printer
+from dataflows import add_metadata, dump_to_path, load, set_type, update_resource
 
-
-def rename_resources(package: PackageWrapper):
-    package.pkg.descriptor['resources'][0]['name'] = 'quarterly'
-    package.pkg.descriptor['resources'][0]['path'] = 'data/quarterly.csv'
-    package.pkg.descriptor['resources'][1]['name'] = 'annual'
-    package.pkg.descriptor['resources'][1]['path'] = 'data/annual.csv'
-    yield package.pkg
-    res_iter = iter(package)
-    for res in res_iter:
-        yield res.it
-    yield from package
-
+def readme(fpath='README.md'):
+    if os.path.exists(fpath):
+        return open(fpath).read()
 
 bond_uk = Flow(
     add_metadata(
@@ -39,28 +32,35 @@ bond_uk = Flow(
               "specType": "simple",
               "spec": {"type": "line","group": "Date","series": ["Rate"]}
             }
-        ]
+        ],
+        readme=readme()
     ),
     load(
         load_source='http://www.bankofengland.co.uk/boeapps/iadb/fromshowcolumns.asp?csv.x=yes&SeriesCodes=IUQAMNPY&UsingCodes=Y&CSVF=TN&Datefrom=01/Jan/1963',
         skip_rows=[1],
-        headers=['Date', 'Rate']
+        headers=['Date', 'Rate'],
+        format='csv',
+        name='quarterly'
     ),
     load(
         load_source='http://www.bankofengland.co.uk/boeapps/iadb/fromshowcolumns.asp?csv.x=yes&SeriesCodes=IUAAMNPY&UsingCodes=Y&CSVF=TN&Datefrom=01/Jan/1963',
         skip_rows=[1],
-        headers=['Year', 'Rate']
+        headers=['Year', 'Rate'],
+        format='csv',
+        name='annual'
     ),
-    rename_resources,
     set_type('Date', resources='quarterly', type='date', format='any'),
     set_type('Rate', resources='quarterly', type='number', description='Quarterly average yield from British Government Securities, 10 year Nominal Par Yield'),
     set_type('Year', resources='annual', type='date', format='any'),
     set_type('Rate', resources='annual', type='number', description='Annual average yield from British Government Securities, 10 year Nominal Par Yield'),
+    update_resource('quarterly', **{'path':'data/quarterly.csv', 'dpp:streaming': True}),
+    update_resource('annual', **{'path':'data/annual.csv', 'dpp:streaming': True}),
     validate(),
-    printer(),
     dump_to_path(),
 )
 
+def flow(parameters, datapackage, resources, stats):
+    return bond_uk
 
 if __name__ == '__main__':
     bond_uk.process()
