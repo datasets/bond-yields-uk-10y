@@ -1,7 +1,7 @@
 import os
 
 from dataflows import Flow, PackageWrapper, ResourceWrapper, validate
-from dataflows import add_metadata, dump_to_path, load, set_type, update_resource
+from dataflows import add_metadata, load, set_type, update_resource
 
 def readme(fpath='README.md'):
     if os.path.exists(fpath):
@@ -55,8 +55,7 @@ bond_uk = Flow(
     set_type('Rate', resources='annual', type='number', description='Annual average yield from British Government Securities, 10 year Nominal Par Yield'),
     update_resource('quarterly', **{'path':'data/quarterly.csv', 'dpp:streaming': True}),
     update_resource('annual', **{'path':'data/annual.csv', 'dpp:streaming': True}),
-    validate(),
-    dump_to_path(),
+    validate()
 )
 
 def flow(parameters, datapackage, resources, stats):
