@@ -12,8 +12,7 @@ Data from Bank of England (series IUAAMNPY "Annual average yield from British
 Government Securities, 10 year Nominal Par Yield") with some minor processing
 (see scripts).
 
-Full information about the BoE Yields data may be found on the BoE website at:
-<http://www.bankofengland.co.uk/statistics/Pages/iadb/notesiadb/Yields.aspx>
+Full information about the BoE Yields data may be found on the BoE website at [bankofengland official site](http://www.bankofengland.co.uk/statistics/Pages/iadb/notesiadb/Yields.aspx)
 
 There are several relevant series:
 
