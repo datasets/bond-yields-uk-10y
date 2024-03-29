@@ -79,6 +79,7 @@
   "views": [
     {
       "name": "graph",
+      "resources": ["quarterly", "annual"],
       "spec": {
         "group": "Date",
         "series": [
