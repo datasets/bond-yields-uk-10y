@@ -17,9 +17,9 @@ Full information about the BoE Yields data may be found on the BoE website at [b
 There are several relevant series:
 
 * 10y par yields Annual average - IUAAMNPY - Annual
-  * <http://www.bankofengland.co.uk/boeapps/iadb/index.asp?Travel=NIxIRx&levels=1&XNotes=Y&G0Xtop.x=56&G0Xtop.y=10&C=DUS&XNotes2=Y&Nodes=X41514X41515X41516X41517X55047X76909X4051X4052X4128X33880X4053X4058&SectionRequired=I&HideNums=-1&ExtraInfo=true#BM>
+  * [www.bankofengland.co.uk](http://www.bankofengland.co.uk/boeapps/iadb/index.asp?Travel=NIxIRx&levels=1&XNotes=Y&G0Xtop.x=56&G0Xtop.y=10&C=DUS&XNotes2=Y&Nodes=X41514X41515X41516X41517X55047X76909X4051X4052X4128X33880X4053X4058&SectionRequired=I&HideNums=-1&ExtraInfo=true#BM)
   * 1984-present
-  * Direct download URLs look like <http://www.bankofengland.co.uk/boeapps/iadb/fromshowcolumns.asp?csv.x=yes&SeriesCodes=IUMAMNPY&UsingCodes=Y&CSVF=TN&Datefrom=01/Jan/1963&Dateto=01/Jan/2015>
+  * [Direct download URLs look like](http://www.bankofengland.co.uk/boeapps/iadb/fromshowcolumns.asp?csv.x=yes&SeriesCodes=IUMAMNPY&UsingCodes=Y&CSVF=TN&Datefrom=01/Jan/1963&Dateto=01/Jan/2015)
 * There are also versions of this series at other granularities down to a day
   * Daily - IUDMNPY - Daily
   * Month average - IUMAMNPY - Monthly
