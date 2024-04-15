@@ -86,6 +86,7 @@
         ],
         "type": "line"
       },
+      "resourceName": "annual",
       "specType": "simple",
       "title": "Average yield from British Government Securities, 10 year Nominal Par Yield"
     }
