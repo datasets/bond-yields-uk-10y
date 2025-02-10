@@ -31,7 +31,7 @@ There are several relevant series:
   * Annual average - IUAAMNPY - Annual
   * End year - IUAMNPY - Annual
 * 10y par gross redemption yield Annual average - IUAAAJLW - Annual
-  * 1984-2007 (not clear why this ends in 2007)
+  * 1984-present (not clear why this ends in 2007)
 
 ## Preparation
 
@@ -40,11 +40,11 @@ You will need Python 3.6 or greater and dataflows library to run the script
 To update the data run the process script locally:
 
 ```
-# Install dataflows
-pip install dataflows
+# Install requirements
+pip install -r scripts/requirements.txt
 
 # Run the script
-python bond_uk_flow.py
+python scripts/bond_uk_flow.py
 ```
 
 ## License
