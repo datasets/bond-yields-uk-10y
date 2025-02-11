@@ -1,7 +1,7 @@
 {
-  "bytes": 3324,
-  "count_of_rows": 173,
-  "hash": "9e160ae873302fef23aa35134238ee88",
+  "bytes": 3928,
+  "count_of_rows": 205,
+  "hash": "606bc3958fe7540e82fecee422a21464",
   "licenses": [
     {
       "id": "odc-pddl",
@@ -11,26 +11,38 @@
   ],
   "name": "bond-yields-uk-10y",
   "profile": "data-package",
-  "readme": "10 year nominal yields on UK government bonds from the bank of England. The 10\nyear government bond yield is considered a standard indicator of long-term\ninterest rates. This is a direct extract from the Bank of [England IUAAMNPY\nseries: \"Annual average yield from British Government Securities, 10 year\nNominal Par Yield\"][boe].\n\n[boe]: http://www.bankofengland.co.uk/boeapps/iadb/index.asp?Travel=NIxIRx&levels=1&XNotes=Y&C=DUS&G0Xtop.x=51&G0Xtop.y=7&XNotes2=Y&Nodes=X41514X41515X41516X41517X55047X76909X4051X4052X4128X33880X4053X4058&SectionRequired=I&HideNums=-1&ExtraInfo=true#BM\n\n## Data\n\nData from Bank of England (series IUAAMNPY \"Annual average yield from British\nGovernment Securities, 10 year Nominal Par Yield\") with some minor processing\n(see scripts).\n\nFull information about the BoE Yields data may be found on the BoE website at:\n<http://www.bankofengland.co.uk/statistics/Pages/iadb/notesiadb/Yields.aspx>\n\nThere are several relevant series:\n\n* 10y par yields Annual average - IUAAMNPY - Annual\n  * <http://www.bankofengland.co.uk/boeapps/iadb/index.asp?Travel=NIxIRx&levels=1&XNotes=Y&G0Xtop.x=56&G0Xtop.y=10&C=DUS&XNotes2=Y&Nodes=X41514X41515X41516X41517X55047X76909X4051X4052X4128X33880X4053X4058&SectionRequired=I&HideNums=-1&ExtraInfo=true#BM>\n  * 1984-present\n  * Direct download URLs look like <http://www.bankofengland.co.uk/boeapps/iadb/fromshowcolumns.asp?csv.x=yes&SeriesCodes=IUMAMNPY&UsingCodes=Y&CSVF=TN&Datefrom=01/Jan/1963&Dateto=01/Jan/2015>\n* There are also versions of this series at other granularities down to a day\n  * Daily - IUDMNPY - Daily\n  * Month average - IUMAMNPY - Monthly\n  * End month - IUMMNPY - Monthly\n  * Quarterly average - IUQAMNPY - Quarterly\n  * End quarter - IUQMNPY - Quarterly\n  * Annual average - IUAAMNPY - Annual\n  * End year - IUAMNPY - Annual\n* 10y par gross redemption yield Annual average - IUAAAJLW - Annual\n  * 1984-2007 (not clear why this ends in 2007)\n\n## Preparation\n\nYou will need Python 3.6 or greater and dataflows library to run the script\n\nTo update the data run the process script locally:\n\n```\n# Install dataflows\npip install dataflows\n\n# Run the script\npython bond_uk_flow.py\n```\n\n## License\n\nThe [Bank of England Terms of Use][tou] appear only to allow non-commercial\nuse:\n\n> Statistical Interactive Database (IADB) Terms and Conditions\n>\n> The content of the database is for general information only, and is provided\n> to users free of charge. Commercial use for financial gain is not permitted\n> without the express permission of the Bank of England.  The Bank of England\n> reserves the right to terminate or restrict user access if it determines that\n> a user is acting in a manner contrary to the interests of other users of the\n> database e.g. excessive usage. [retrieved 2013-04-07]\n\n[tou]: http://www.bankofengland.co.uk/pages/disclaimer.aspx#Statistics\n\nHowever, the amounts of data provided in this dataset is so minimal as likely to fall\nbelow any threshold for Database Rights.\n\nAs such the maintainers feel warranted in putting the dataset out under the\nPublic Domain Dedication and License but that they can, obviously, only license\n(or dedicate) material they control (or in which there are no rights).\n",
+  "readme": "<a className=\"gh-badge\" href=\"https://datahub.io/core/bond-yields-uk-10y\"><img src=\"https://badgen.net/badge/icon/View%20on%20datahub.io/orange?icon=https://datahub.io/datahub-cube-badge-icon.svg&label&scale=1.25\" alt=\"badge\" /></a>\n\n10 year nominal yields on UK government bonds from the bank of England. The 10\nyear government bond yield is considered a standard indicator of long-term\ninterest rates. This is a direct extract from the Bank of [England IUAAMNPY\nseries: \"Annual average yield from British Government Securities, 10 year\nNominal Par Yield\"][boe].\n\n[boe]: http://www.bankofengland.co.uk/boeapps/iadb/index.asp?Travel=NIxIRx&levels=1&XNotes=Y&C=DUS&G0Xtop.x=51&G0Xtop.y=7&XNotes2=Y&Nodes=X41514X41515X41516X41517X55047X76909X4051X4052X4128X33880X4053X4058&SectionRequired=I&HideNums=-1&ExtraInfo=true#BM\n\n## Data\n\nData from Bank of England (series IUAAMNPY \"Annual average yield from British\nGovernment Securities, 10 year Nominal Par Yield\") with some minor processing\n(see scripts).\n\nFull information about the BoE Yields data may be found on the BoE website at [bankofengland official site](http://www.bankofengland.co.uk/statistics/Pages/iadb/notesiadb/Yields.aspx)\n\nThere are several relevant series:\n\n* 10y par yields Annual average - IUAAMNPY - Annual\n  * [www.bankofengland.co.uk](http://www.bankofengland.co.uk/boeapps/iadb/index.asp?Travel=NIxIRx&levels=1&XNotes=Y&G0Xtop.x=56&G0Xtop.y=10&C=DUS&XNotes2=Y&Nodes=X41514X41515X41516X41517X55047X76909X4051X4052X4128X33880X4053X4058&SectionRequired=I&HideNums=-1&ExtraInfo=true#BM)\n  * 1984-present\n  * [Direct download URLs look like](http://www.bankofengland.co.uk/boeapps/iadb/fromshowcolumns.asp?csv.x=yes&SeriesCodes=IUMAMNPY&UsingCodes=Y&CSVF=TN&Datefrom=01/Jan/1963&Dateto=01/Jan/2015)\n* There are also versions of this series at other granularities down to a day\n  * Daily - IUDMNPY - Daily\n  * Month average - IUMAMNPY - Monthly\n  * End month - IUMMNPY - Monthly\n  * Quarterly average - IUQAMNPY - Quarterly\n  * End quarter - IUQMNPY - Quarterly\n  * Annual average - IUAAMNPY - Annual\n  * End year - IUAMNPY - Annual\n* 10y par gross redemption yield Annual average - IUAAAJLW - Annual\n  * 1984-2007 (not clear why this ends in 2007)\n\n## Preparation\n\nYou will need Python 3.6 or greater and dataflows library to run the script\n\nTo update the data run the process script locally:\n\n```\n# Install dataflows\npip install dataflows\n\n# Run the script\npython bond_uk_flow.py\n```\n\n## License\n\nThe [Bank of England Terms of Use][tou] appear only to allow non-commercial\nuse:\n\n> Statistical Interactive Database (IADB) Terms and Conditions\n>\n> The content of the database is for general information only, and is provided\n> to users free of charge. Commercial use for financial gain is not permitted\n> without the express permission of the Bank of England.  The Bank of England\n> reserves the right to terminate or restrict user access if it determines that\n> a user is acting in a manner contrary to the interests of other users of the\n> database e.g. excessive usage. [retrieved 2013-04-07]\n\n[tou]: http://www.bankofengland.co.uk/pages/disclaimer.aspx#Statistics\n\nHowever, the amounts of data provided in this dataset is so minimal as likely to fall\nbelow any threshold for Database Rights.\n\nAs such the maintainers feel warranted in putting the dataset out under the\nPublic Domain Dedication and License but that they can, obviously, only license\n(or dedicate) material they control (or in which there are no rights).\n",
   "resources": [
     {
+      "bytes": 3133,
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
       "dpp:streaming": true,
       "encoding": "utf-8",
       "format": "csv",
-      "mediatype": "text/csv",
+      "hash": "4b87efd19b25241f5de1dcfe5da95a00",
       "name": "quarterly",
-      "path": "data/quarterly.csv",
+      "path": "data\\quarterly.csv",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "format": "any",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
+            "decimalChar": ".",
             "description": "Quarterly average yield from British Government Securities, 10 year Nominal Par Yield",
             "format": "default",
+            "groupChar": "",
             "name": "Rate",
             "type": "number"
           }
@@ -41,23 +53,35 @@
       }
     },
     {
+      "bytes": 795,
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
       "dpp:streaming": true,
       "encoding": "utf-8",
       "format": "csv",
-      "mediatype": "text/csv",
+      "hash": "7dc83fef9f3a6e2aa29c496c1544a4ff",
       "name": "annual",
-      "path": "data/annual.csv",
+      "path": "data\\annual.csv",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "format": "any",
+            "format": "%Y-%m-%d",
             "name": "Year",
             "type": "date"
           },
           {
+            "decimalChar": ".",
             "description": "Annual average yield from British Government Securities, 10 year Nominal Par Yield",
             "format": "default",
+            "groupChar": "",
             "name": "Rate",
             "type": "number"
           }
@@ -80,16 +104,14 @@
     {
       "name": "graph",
       "spec": {
-        "group": "Year",
+        "group": "Date",
         "series": [
           "Rate"
         ],
         "type": "line"
       },
-      "resourceName": "annual",
       "specType": "simple",
       "title": "Average yield from British Government Securities, 10 year Nominal Par Yield"
     }
-  ],
-  "collection": "economic-data"
+  ]
 }
