@@ -53,45 +53,6 @@
       }
     },
     {
-      "bytes": 3208,
-      "dialect": {
-        "caseSensitiveHeader": false,
-        "delimiter": ",",
-        "doubleQuote": true,
-        "header": true,
-        "lineTerminator": "\r\n",
-        "quoteChar": "\"",
-        "skipInitialSpace": false
-      },
-      "dpp:streaming": true,
-      "encoding": "utf-8",
-      "format": "csv",
-      "hash": "ca82de213a22dfa08250d6b2ef66e0b4",
-      "name": "graph",
-      "path": "data/quarterly.csv",
-      "profile": "tabular-data-resource",
-      "schema": {
-        "fields": [
-          {
-            "format": "%Y-%m-%d",
-            "name": "Date",
-            "type": "date"
-          },
-          {
-            "decimalChar": ".",
-            "description": "Quarterly average yield from British Government Securities, 10 year Nominal Par Yield",
-            "format": "default",
-            "groupChar": "",
-            "name": "Rate",
-            "type": "number"
-          }
-        ],
-        "missingValues": [
-          ""
-        ]
-      }
-    },
-    {
       "bytes": 813,
       "dialect": {
         "caseSensitiveHeader": false,
@@ -143,7 +104,7 @@
     {
       "name": "graph",
       "resources": [
-        "graph"
+        "quarterly"
       ],
       "spec": {
         "group": "Date",
